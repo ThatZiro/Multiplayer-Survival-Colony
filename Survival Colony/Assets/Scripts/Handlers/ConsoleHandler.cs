@@ -11,7 +11,7 @@ public class ConsoleHandler : MonoBehaviour
     //Commands
     public List<object> commandList;
 
-    public static DebugCommand SPEED_BOOST;
+    public static DebugCommand SPECTATOR;
     public static DebugCommand<int> SET_SPEED;
     public static DebugCommand HELP;
 
@@ -89,9 +89,19 @@ public class ConsoleHandler : MonoBehaviour
 
     private void Awake()
     {
-        SPEED_BOOST = new DebugCommand("speedboost", "Doubles Speed Value", "speedboost", () =>
+        SPECTATOR = new DebugCommand("spectator", "toggles spectator move", "spectator", () =>
         {
-            Debug.Log("Increase Speed");
+            InputHandler ih = FindObjectOfType<InputHandler>();
+            ih.isSpectator = !ih.isSpectator;
+            if (ih.isSpectator)
+            {
+                ih.spectatorCamera.EnterSpectator();
+            }
+            else
+            {
+                ih.spectatorCamera.LeaveSpectator();
+            }
+            showConsole = false;
         });
 
         SET_SPEED = new DebugCommand<int>("set_speed", "Sets speed to value", "set_speed <amount>",  (x) => {
@@ -103,7 +113,7 @@ public class ConsoleHandler : MonoBehaviour
         });
         commandList = new List<object>
         {
-            SPEED_BOOST,
+            SPECTATOR,
             SET_SPEED,
             HELP
         };

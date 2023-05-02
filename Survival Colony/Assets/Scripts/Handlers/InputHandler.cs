@@ -6,9 +6,12 @@ public class InputHandler : MonoBehaviour
 {
     private PlayerControls playerControls;
     public AnimationHandler animationHandler;
+    public SpecatorCamera spectatorCamera;
     public KinematicCharacterController.Examples.ExampleCharacterController exampleCharacterController;
 
     public Vector2 MoveInput;
+
+    public bool isSpectator;
     private void OnEnable()
     {
         if (playerControls == null)
@@ -27,21 +30,31 @@ public class InputHandler : MonoBehaviour
 
     private void Update()
     {
-        TickInput();
+        TickMenu();
+        if (isSpectator)
+        {
+            TickSpectator();
+        }
+        else
+        {
+            TickMovement();
+        }
     }
 
-    public void TickInput()
+    public void TickMenu()
     {
         if (playerControls.MenuControls.Debug.WasPressedThisFrame())
         {
             //Toggle Debug Menu
             FindAnyObjectByType<ConsoleHandler>().OnToggleDebug();
         }
-
         if (playerControls.MenuControls.SendCommand.WasPressedThisFrame())
         {
             FindAnyObjectByType<ConsoleHandler>().SendCommand();
         }
+    }
+    public void TickMovement()
+    {
 
         if (playerControls.MovementControls.Sprint.IsPressed())
         {
@@ -53,5 +66,10 @@ public class InputHandler : MonoBehaviour
         }
         animationHandler.isSprinting = playerControls.MovementControls.Sprint.IsPressed();
         animationHandler.SetMoveValues(MoveInput);
+    }
+
+    public void TickSpectator()
+    {
+        spectatorCamera.Move(MoveInput);
     }
 }
