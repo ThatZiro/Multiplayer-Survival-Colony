@@ -70,6 +70,118 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""MovementControls"",
+            ""id"": ""28041c4a-fe0f-4ee9-b0a9-7f6ae270efc2"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""523124dd-cf9a-4b83-99f8-89f4f6c4d5a2"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""64adda6a-a9ea-4c2a-9b38-443f65eb818d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""7dca9383-9a3e-49a4-94e6-7e3426157600"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""cdc69910-538d-47c9-97b3-2c81d9fb2426"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""4bd54675-80f1-4e3f-830d-6fc3164cbf66"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""48e86e17-ec5f-4fb3-9cb3-9632863c8699"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""2f3ca1f5-d993-451b-8e66-995f79f58959"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""6d93a276-e2b0-45a5-994c-270071718379"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8476348b-213d-47fd-8153-b68bcb85e52a"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44def388-5c55-4973-b5f9-35d0c29805b0"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -78,6 +190,11 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_MenuControls = asset.FindActionMap("MenuControls", throwIfNotFound: true);
         m_MenuControls_Debug = m_MenuControls.FindAction("Debug", throwIfNotFound: true);
         m_MenuControls_SendCommand = m_MenuControls.FindAction("SendCommand", throwIfNotFound: true);
+        // MovementControls
+        m_MovementControls = asset.FindActionMap("MovementControls", throwIfNotFound: true);
+        m_MovementControls_Move = m_MovementControls.FindAction("Move", throwIfNotFound: true);
+        m_MovementControls_Jump = m_MovementControls.FindAction("Jump", throwIfNotFound: true);
+        m_MovementControls_Sprint = m_MovementControls.FindAction("Sprint", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -189,9 +306,77 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         }
     }
     public MenuControlsActions @MenuControls => new MenuControlsActions(this);
+
+    // MovementControls
+    private readonly InputActionMap m_MovementControls;
+    private List<IMovementControlsActions> m_MovementControlsActionsCallbackInterfaces = new List<IMovementControlsActions>();
+    private readonly InputAction m_MovementControls_Move;
+    private readonly InputAction m_MovementControls_Jump;
+    private readonly InputAction m_MovementControls_Sprint;
+    public struct MovementControlsActions
+    {
+        private @PlayerControls m_Wrapper;
+        public MovementControlsActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_MovementControls_Move;
+        public InputAction @Jump => m_Wrapper.m_MovementControls_Jump;
+        public InputAction @Sprint => m_Wrapper.m_MovementControls_Sprint;
+        public InputActionMap Get() { return m_Wrapper.m_MovementControls; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MovementControlsActions set) { return set.Get(); }
+        public void AddCallbacks(IMovementControlsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MovementControlsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MovementControlsActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+            @Sprint.started += instance.OnSprint;
+            @Sprint.performed += instance.OnSprint;
+            @Sprint.canceled += instance.OnSprint;
+        }
+
+        private void UnregisterCallbacks(IMovementControlsActions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+            @Sprint.started -= instance.OnSprint;
+            @Sprint.performed -= instance.OnSprint;
+            @Sprint.canceled -= instance.OnSprint;
+        }
+
+        public void RemoveCallbacks(IMovementControlsActions instance)
+        {
+            if (m_Wrapper.m_MovementControlsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMovementControlsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MovementControlsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MovementControlsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MovementControlsActions @MovementControls => new MovementControlsActions(this);
     public interface IMenuControlsActions
     {
         void OnDebug(InputAction.CallbackContext context);
         void OnSendCommand(InputAction.CallbackContext context);
+    }
+    public interface IMovementControlsActions
+    {
+        void OnMove(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnSprint(InputAction.CallbackContext context);
     }
 }

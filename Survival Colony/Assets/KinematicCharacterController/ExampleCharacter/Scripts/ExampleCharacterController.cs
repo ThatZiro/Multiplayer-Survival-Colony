@@ -43,9 +43,13 @@ namespace KinematicCharacterController.Examples
     public class ExampleCharacterController : MonoBehaviour, ICharacterController
     {
         public KinematicCharacterMotor Motor;
+        public AnimationHandler animHandler;
+
 
         [Header("Stable Movement")]
+        public float sprintMultiplayer = 1.5f;
         public float MaxStableMoveSpeed = 10f;
+        public float movementMultiplier = 1f;
         public float StableMovementSharpness = 15f;
         public float OrientationSharpness = 10f;
         public OrientationMethod OrientationMethod = OrientationMethod.TowardsCamera;
@@ -96,6 +100,9 @@ namespace KinematicCharacterController.Examples
 
             // Assign the characterController to the motor
             Motor.CharacterController = this;
+
+            //Assign Animation Handler
+            animHandler = FindObjectOfType<AnimationHandler>();
         }
 
         /// <summary>
@@ -284,6 +291,9 @@ namespace KinematicCharacterController.Examples
             {
                 case CharacterState.Default:
                     {
+                        //SetAnimation IsGrounded
+                        animHandler.UpdateGrounding(Motor.GroundingStatus.IsStableOnGround);
+
                         // Ground movement
                         if (Motor.GroundingStatus.IsStableOnGround)
                         {
@@ -297,7 +307,7 @@ namespace KinematicCharacterController.Examples
                             // Calculate target velocity
                             Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
                             Vector3 reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized * _moveInputVector.magnitude;
-                            Vector3 targetMovementVelocity = reorientedInput * MaxStableMoveSpeed;
+                            Vector3 targetMovementVelocity = reorientedInput * MaxStableMoveSpeed * movementMultiplier;
 
                             // Smooth movement Velocity
                             currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity, 1f - Mathf.Exp(-StableMovementSharpness * deltaTime));
@@ -316,7 +326,7 @@ namespace KinematicCharacterController.Examples
                                 if (currentVelocityOnInputsPlane.magnitude < MaxAirMoveSpeed)
                                 {
                                     // clamp addedVel to make total vel not exceed max vel on inputs plane
-                                    Vector3 newTotal = Vector3.ClampMagnitude(currentVelocityOnInputsPlane + addedVelocity, MaxAirMoveSpeed);
+                                    Vector3 newTotal = Vector3.ClampMagnitude(currentVelocityOnInputsPlane + addedVelocity, MaxAirMoveSpeed * movementMultiplier);
                                     addedVelocity = newTotal - currentVelocityOnInputsPlane;
                                 }
                                 else
@@ -352,6 +362,7 @@ namespace KinematicCharacterController.Examples
                         // Handle jumping
                         _jumpedThisFrame = false;
                         _timeSinceJumpRequested += deltaTime;
+
                         if (_jumpRequested)
                         {
                             // See if we actually are allowed to jump
