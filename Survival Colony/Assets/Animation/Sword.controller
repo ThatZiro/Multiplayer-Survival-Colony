@@ -4629,8 +4629,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 457418204989730995}
-  m_StateMachineBehaviours:
-  - {fileID: -423409601703645747}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4658,8 +4657,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3105287217909649111}
-  m_StateMachineBehaviours:
-  - {fileID: -5998929318418718094}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -5520,9 +5518,7 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours:
-  - {fileID: 8859829603488135662}
-  - {fileID: -3674119227643411824}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -5604,9 +5600,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.04733336
   m_TransitionOffset: 0
-  m_ExitTime: 0.6875
+  m_ExitTime: 0.68749994
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -6185,8 +6181,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7314869704438186841}
-  m_StateMachineBehaviours:
-  - {fileID: -1339976470526693104}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -6426,8 +6421,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8791430798119976219}
-  m_StateMachineBehaviours:
-  - {fileID: 2644438999854278887}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -7005,8 +6999,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -887832763168762164}
-  m_StateMachineBehaviours:
-  - {fileID: 1780394151340293211}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -10503,12 +10496,11 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Main_Jump_End_01
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1478939919339610372}
-  m_StateMachineBehaviours:
-  - {fileID: -1156679218596880260}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
