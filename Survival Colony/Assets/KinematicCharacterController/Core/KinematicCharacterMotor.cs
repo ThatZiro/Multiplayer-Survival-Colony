@@ -69,6 +69,7 @@ namespace KinematicCharacterController
         public bool FoundAnyGround;
         public bool IsStableOnGround;
         public bool SnappingPrevented;
+        public bool IsInWater;
         public Vector3 GroundNormal;
         public Vector3 InnerGroundNormal;
         public Vector3 OuterGroundNormal;

@@ -11,12 +11,10 @@ public class MapGenerator : MonoBehaviour
     public GameObject starterIsland_2;
     public GameObject starterIsland_3;
 
-    public GameObject[] smallIslands;
 
-    public GameObject[] mediumIslands;
-
-    public GameObject[] largeIslands;
-
+    [Header("Sea")]
+    public GameObject waterPlane;
+    public float sealevel;
 
     [Header("World Settings")]
     [Range(0,3)]
@@ -33,6 +31,7 @@ public class MapGenerator : MonoBehaviour
     {
         worldSize = worldSize * worldSpread;
 
+        
         switch (starterIsland)
         {
             case 0:
@@ -49,12 +48,13 @@ public class MapGenerator : MonoBehaviour
                 break;
 
         }
-
-        PopulateMap();
     }
 
     public void SpawnIsland(GameObject island, Vector2 location)
     {
+
+        Instantiate(waterPlane, Vector3.up * sealevel, Quaternion.identity);
+
         int randomDirection = Random.Range(0, 4);
 
         Vector2 offset = new Vector2(worldSize, worldSize);
@@ -76,36 +76,6 @@ public class MapGenerator : MonoBehaviour
         location -= offset;
         Vector3 pos = new Vector3(location.x * worldSpread, 0, location.y * worldSpread);
         Instantiate(island, pos, Quaternion.identity);
-    }
-
-    public void PopulateMap()
-    {
-        float forceIslands = 20;
-
-        for (int i = 0; i < forceIslands; i++)
-        {
-            float x = Random.Range(0, worldSize);
-            float y = Random.Range(0, worldSize);
-            Vector2 location = new Vector2(x, y);
-
-            int size = Random.Range(1, 4);
-
-            switch (size)
-            {
-                case 1:
-                    int s = Random.Range(0, smallIslands.Length);
-                    SpawnIsland(smallIslands[s], location);
-                    break;
-                case 2:
-                    int m = Random.Range(0, mediumIslands.Length);
-                    SpawnIsland(mediumIslands[m], location);
-                    break;
-                case 3:
-                    int l = Random.Range(0, largeIslands.Length);
-                    SpawnIsland(largeIslands[l], location);
-                    break;
-            }
-        }
     }
 
 }

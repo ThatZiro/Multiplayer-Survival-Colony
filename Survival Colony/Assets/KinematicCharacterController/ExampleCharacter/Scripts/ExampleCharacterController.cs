@@ -9,6 +9,7 @@ namespace KinematicCharacterController.Examples
     public enum CharacterState
     {
         Default,
+        Swimming,
     }
 
     public enum OrientationMethod
@@ -48,7 +49,9 @@ namespace KinematicCharacterController.Examples
 
         [Header("Stable Movement")]
         public float sprintMultiplayer = 1.5f;
+        public float swimMultiplier = .5f;
         public float MaxStableMoveSpeed = 10f;
+        [HideInInspector]
         public float movementMultiplier = 1f;
         public float StableMovementSharpness = 15f;
         public float OrientationSharpness = 10f;
@@ -291,12 +294,20 @@ namespace KinematicCharacterController.Examples
             {
                 case CharacterState.Default:
                     {
-                        //SetAnimation IsGrounded
-                        animHandler.UpdateGrounding(Motor.GroundingStatus.IsStableOnGround);
-
-                        // Ground movement
+                        bool isInWater = false;
                         if (Motor.GroundingStatus.IsStableOnGround)
                         {
+                            if (Motor.GroundingStatus.GroundCollider.tag == "Water")
+                            {
+                                isInWater = true;
+                            }
+                        }
+
+
+                        // Ground movement
+                        if (Motor.GroundingStatus.IsStableOnGround && isInWater == false)
+                        {
+                            animHandler.UpdateGrounding(true);
                             float currentVelocityMagnitude = currentVelocity.magnitude;
 
                             Vector3 effectiveGroundNormal = Motor.GroundingStatus.GroundNormal;
@@ -315,6 +326,12 @@ namespace KinematicCharacterController.Examples
                         // Air movement
                         else
                         {
+                            animHandler.UpdateGrounding(false);
+                            //Check if Standing in water
+                            if(isInWater == true)
+                            {
+                                movementMultiplier = swimMultiplier;
+                            }
                             // Add move input
                             if (_moveInputVector.sqrMagnitude > 0f)
                             {
