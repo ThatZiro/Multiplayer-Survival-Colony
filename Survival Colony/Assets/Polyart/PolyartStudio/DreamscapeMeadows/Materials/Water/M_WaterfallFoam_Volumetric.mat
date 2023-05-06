@@ -45,7 +45,7 @@ Material:
     - _Acceleration: 1.27
     - _AlphaCutoff: 0.5
     - _Cutoff: 0.1
-    - _Height: 10
+    - _Height: 4.25
     - _HorizontalSpeed: 0
     - _QueueControl: 0
     - _QueueOffset: 0
