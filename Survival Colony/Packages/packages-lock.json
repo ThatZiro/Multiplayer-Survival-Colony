@@ -152,7 +152,11 @@
     "com.unity.terrain-tools": {
       "version": "4.0.5",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "depth": 0,
+=======
+      "depth": 1,
+>>>>>>> Stashed changes
 =======
       "depth": 1,
 >>>>>>> Stashed changes
