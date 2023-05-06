@@ -14,28 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabList: []
   prefabData:
-  - prefab: {fileID: 2118840309929815125, guid: bb5ef018996d1c842a3fda7ef67595e9,
+  - prefab: {fileID: 5194611686949037208, guid: 61bdbc13522514f4e9095e7fec63a76e,
       type: 3}
     selected: 1
-  - prefab: {fileID: 5226316510126817088, guid: dbe24c59355c97e44a773f2bea8a279f,
+  - prefab: {fileID: 427588332354682805, guid: 320a2153c306f124e9df52b52a0f4e19, type: 3}
+    selected: 1
+  - prefab: {fileID: 3438365831924901988, guid: c847f36ff465f9d4687850c1982d3683,
       type: 3}
     selected: 1
-  - prefab: {fileID: 843049207190869251, guid: f1e434588f51ff14e8241bedbba1108f, type: 3}
-    selected: 1
-  - prefab: {fileID: 2887306114209361928, guid: 4e2e2ff19b4c8ca44b27bd5bc948e344,
+  - prefab: {fileID: 1844897081636531020, guid: 2832e458df8616d459183adb0dfa9083,
       type: 3}
     selected: 1
-  - prefab: {fileID: 9032936889209960353, guid: cd18cfb16ddc57e4784ad9f03c155cea,
+  - prefab: {fileID: 1374899979308285549, guid: 32d3db38af308cc4a86540a04c1e129f,
+      type: 3}
+    selected: 1
+  - prefab: {fileID: 3438365831924901988, guid: 392624d6f12b1eb4ea94da6c9f92c592,
       type: 3}
     selected: 1
   paintType: 0
-  brushSize: 50
+  brushSize: 20
   minBrushSize: 0.1
-  maxBrushSize: 50
-  paintDeltaDistance: 0.1
+  maxBrushSize: 20
+  paintDeltaDistance: 0.4
   maxPaintDeltaDistance: 3
   minPaintDeltaDistance: 0.1
-  prefabsPerStroke: 3
+  prefabsPerStroke: 1
   maxprefabsPerStroke: 20
   minprefabsPerStroke: 1
   spawnHeight: 10
