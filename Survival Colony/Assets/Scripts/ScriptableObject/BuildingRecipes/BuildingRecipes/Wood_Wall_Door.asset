@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b781debdbb74b154ba8462e1ba1b80b1, type: 3}
+  m_Name: Wood_Wall_Door
+  m_EditorClassIdentifier: 
+  isBuildable: 0
+  Object: {fileID: 4000584977576108555, guid: c4742b62c4bbac047ad94bd9dc4b6c7c, type: 3}
+  icon: {fileID: 21300000, guid: 52cde2cda09d58748b4607e427ca8f0d, type: 3}
+  recipeName: 
+  size: 0
+  blockType: 1
