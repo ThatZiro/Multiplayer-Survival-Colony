@@ -8,12 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IL3DN_Water
-  m_Shader: {fileID: 4800000, guid: 60751e0ebc0c92d4b9adf09e2596d80a, type: 3}
+  m_Shader: {fileID: 4800000, guid: ad8e030ef04669d4aba092657d5d84b4, type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - EFFECT_HUE_VARIATION
-  - GEOM_TYPE_LEAF
-  - _ALPHAPREMULTIPLY_ON
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -41,6 +38,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _DetailTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Displacement:
+        m_Texture: {fileID: 2800000, guid: b166ccd7e871a3948ac1028410a7fe76, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -91,6 +92,14 @@ Material:
         m_Texture: {fileID: 8900000, guid: a9f053d430424adb925523ba78342596, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ReflectionNormal:
+        m_Texture: {fileID: 2800000, guid: 70546bb8eb214354e83b7f57e5a4821c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ReflectionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Shadermap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -110,6 +119,10 @@ Material:
     - _WaterNormal:
         m_Texture: {fileID: 2800000, guid: dd2fd2df93418444c8e280f1d34deeb5, type: 3}
         m_Scale: {x: 100, y: 100}
+        m_Offset: {x: 0, y: 0}
+    - _WaveNormal:
+        m_Texture: {fileID: 2800000, guid: 70546bb8eb214354e83b7f57e5a4821c, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _tex3coord:
         m_Texture: {fileID: 0}
@@ -135,12 +148,14 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _BumpScale: 1
+    - _ColorDepthFade: 0
     - _Cull: 2
     - _Cutoff: 0.5
     - _DeepOpacity: 1
     - _Depth: 3.2
     - _Depthdarkness: 1
     - _DetailNormalMapScale: 1
+    - _DisplaceStrength: 0
     - _Distortion: 0
     - _DstBlend: 10
     - _EdgeReach: 0
@@ -149,7 +164,9 @@ Material:
     - _Float2: 1
     - _FlowSpeed: 1
     - _Foam: 0.1
+    - _FoamCutoff: 0
     - _FoamDepth: 0
+    - _FoamDepthFade: 0.19
     - _FoamEdge: 1
     - _FoamFalloff: 0
     - _FoamOpacity: 1
@@ -158,6 +175,7 @@ Material:
     - _FoamSize: 1
     - _FoamSmoothness: 0
     - _FoamSpecular: 0
+    - _FoamSpeed: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.19
     - _GlossyReflections: 1
@@ -166,11 +184,15 @@ Material:
     - _NormalScale: 0.18
     - _NormalStrenght: 0.5
     - _OcclusionStrength: 1
+    - _Opacity: 1
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _ReflectionsIntensity: 1
     - _RefractionAmount: 0
+    - _RefractionDepth: 0
+    - _RefractionStrength: 0
     - _RimSize: 0.83
     - _Rimfalloff: 1.5
     - _SHallowOpacity: 1
@@ -188,21 +210,30 @@ Material:
     - _Tiling: 0.05
     - _TranslucencyViewDependency: 0
     - _Transparency: 5
+    - _TurbulenceDistortionIntensity: 0.8
+    - _TurbulenceScale: 1
+    - _TurbulenceTiling: 0
     - _UVSec: 0
     - _WaterDepth: 0
     - _WaterFalloff: -0.5
     - _WaterOpacity: 0.088
     - _WaterSmoothness: 0.33
     - _WaterSpecular: 0
+    - _WaveNormalIntensity: 1
+    - _WaveTiling01: 1
+    - _WaveTiling02: 1
     - _WavesAmount: 93.73
     - _WavesAmplitude: 0.02
     - _WindQuality: 0
+    - _WorldtoObjectPosition: 0
     - _ZWrite: 0
     - __dirty: 0
     m_Colors:
     - _BottomColor: {r: 0.2781999, g: 0.09594162, b: 0.41509432, a: 1}
     - _Color: {r: 0.09545212, g: 0.31258285, b: 0.3679245, a: 0.42745098}
     - _Color0: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorDeep: {r: 0.12130647, g: 0.34791896, b: 0.5471698, a: 0}
+    - _ColorShallow: {r: 0.5990566, g: 0.9091429, b: 1, a: 0}
     - _DeepColor: {r: 0.02990388, g: 0.16228628, b: 0.30188626, a: 1}
     - _EdgeColor: {r: 0.4339623, g: 0.33974534, b: 0.16580635, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
