@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2753,7 +2753,7 @@ MonoBehaviour:
     type: 3}
   starterIsland_3: {fileID: 5049386004934823091, guid: 612626a32bcdc3d4daff0bb139e7257d,
     type: 3}
-  waterPlane: {fileID: 5537467930782276646, guid: aabd98fa485a8694b9706a5434da2e71,
+  waterPlane: {fileID: 5537467930782276646, guid: 1a1ad5b4bc55d414ba64a275899649ba,
     type: 3}
   sealevel: 25
   starterIsland: 0
