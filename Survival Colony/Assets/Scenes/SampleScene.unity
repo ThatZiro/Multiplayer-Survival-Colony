@@ -1467,7 +1467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03efd317b8193c84aba5fb0f96a23409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   starterIsland_0: {fileID: 0}
   starterIsland_1: {fileID: 0}
   starterIsland_2: {fileID: 0}
@@ -1475,19 +1474,6 @@ MonoBehaviour:
   smallIslands: []
   mediumIslands: []
   largeIslands: []
-=======
-  starterIsland_0: {fileID: 1221580739179736353, guid: 02d0abc220ded6147bb00ec33a941279,
-    type: 3}
-  starterIsland_1: {fileID: 7706754817792615650, guid: 7d66a4ae7a635d74489866334826e830,
-    type: 3}
-  starterIsland_2: {fileID: 6742544810138383371, guid: d9cba8c994c242c4496fb6519176198e,
-    type: 3}
-  starterIsland_3: {fileID: 5049386004934823091, guid: 612626a32bcdc3d4daff0bb139e7257d,
-    type: 3}
-  waterPlane: {fileID: 5537467930782276646, guid: 1a1ad5b4bc55d414ba64a275899649ba,
-    type: 3}
-  sealevel: 25
->>>>>>> Stashed changes
   starterIsland: 0
   seed: 0
   worldSize: 0
