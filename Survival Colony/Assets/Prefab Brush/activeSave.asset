@@ -14,34 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabList: []
   prefabData:
-  - prefab: {fileID: 2118840309929815125, guid: bb5ef018996d1c842a3fda7ef67595e9,
+  - prefab: {fileID: 7964252358626316336, guid: 12c9a4c875a3c794493b3c68df22a2fe,
       type: 3}
     selected: 1
-  - prefab: {fileID: 5226316510126817088, guid: dbe24c59355c97e44a773f2bea8a279f,
-      type: 3}
+  - prefab: {fileID: 538835696960246007, guid: 1a7ae6a320113d04ba9835fd2c2f4582, type: 3}
     selected: 1
-  - prefab: {fileID: 843049207190869251, guid: f1e434588f51ff14e8241bedbba1108f, type: 3}
-    selected: 1
-  - prefab: {fileID: 2887306114209361928, guid: 4e2e2ff19b4c8ca44b27bd5bc948e344,
-      type: 3}
-    selected: 1
-  - prefab: {fileID: 9032936889209960353, guid: cd18cfb16ddc57e4784ad9f03c155cea,
+  - prefab: {fileID: 2137348566689165121, guid: 7eddc858137ad114aa78b84a96055d92,
       type: 3}
     selected: 1
   paintType: 0
-  brushSize: 50
+  brushSize: 10
   minBrushSize: 0.1
-  maxBrushSize: 50
-  paintDeltaDistance: 0.1
-  maxPaintDeltaDistance: 3
-  minPaintDeltaDistance: 0.1
-  prefabsPerStroke: 3
-  maxprefabsPerStroke: 20
-  minprefabsPerStroke: 1
+  maxBrushSize: 20
+  paintDeltaDistance: 5
+  maxPaintDeltaDistance: 10
+  minPaintDeltaDistance: 5
+  prefabsPerStroke: 5
+  maxprefabsPerStroke: 10
+  minprefabsPerStroke: 5
   spawnHeight: 10
   addRigidbodyToPaintedPrefab: 1
   physicsIterations: 100
-  checkLayer: 0
+  checkLayer: 1
   checkTag: 0
   checkSlope: 0
   ignorePaintedPrefabs: 0
@@ -49,23 +43,23 @@ MonoBehaviour:
   chainPivotAxis: 0
   chainDirection: 0
   requiredTagMask: 0
-  requiredLayerMask: 0
+  requiredLayerMask: 32
   minRequiredSlope: 0
   maxRequiredSlope: 0
   prefabOriginOffset: {x: 0, y: 0, z: 0}
   prefabRotationOffset: {x: 0, y: 0, z: 0}
-  draggingAction: 0
+  draggingAction: 2
   rotationAxis: 0
   rotationSensitivity: 10
-  parentingStyle: 0
+  parentingStyle: 2
   parent: {fileID: 0}
   rotateToMatchSurface: 0
   rotateSurfaceDirection: 0
-  randomizeRotation: 0
+  randomizeRotation: 1
   minXRotation: 0
   maxXRotation: 0
   minYRotation: 0
-  maxYRotation: 0
+  maxYRotation: 360
   minZRotation: 0
   maxZRotation: 0
   scaleType: 0
@@ -92,7 +86,7 @@ MonoBehaviour:
   minRequiredSlopeForErase: 0
   maxRequiredSlopeForErase: 0
   eraseDetection: 0
-  paintBrushHotKey: 112
+  paintBrushHotKey: 9
   paintBrushHoldKey: 1
   removeBrushHotKey: 306
   removeBrushHoldKey: 1

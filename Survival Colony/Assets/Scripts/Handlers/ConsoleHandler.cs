@@ -105,7 +105,7 @@ public class ConsoleHandler : MonoBehaviour
         });
 
         SET_SPEED = new DebugCommand<int>("set_speed", "Sets speed to value", "set_speed <amount>",  (x) => {
-            Debug.Log("Speed has been set to " + x);
+            FindAnyObjectByType<KinematicCharacterController.Examples.ExampleCharacterController>().sprintMultiplayer = x;
         });
 
         HELP = new DebugCommand("help", "Shows a list of commands", "help", () => {

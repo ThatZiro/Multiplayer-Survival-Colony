@@ -1,5 +1,167 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1433090660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1433090661}
+  - component: {fileID: 1433090662}
+  m_Layer: 0
+  m_Name: Inventory_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1433090661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433090660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2680450844664492120}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1433090662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433090660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbec72cf45f4c0b41a7ccc22f5c65440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hotbar:
+  - item: {fileID: 11400000, guid: 981ee5c144983b541bfa738ec2af78f6, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 0b0299465a27ee3499b53217708bbe35, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: b7849776ddb85524e8a3df00397d9eba, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 3f12832e077c96948bc02bb05bff04d8, type: 2}
+    amount: 1
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 11400000, guid: 1f1e47cfae841e54fb95b5de866808a0, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 829106fe30ebbcc49abef56f9c868e24, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: f9001f9597a7c654593280a5b19404e2, type: 2}
+    amount: 5
+  inventory:
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  armor_Helm: {fileID: 11400000, guid: 2b283527a1b04fe4291b15b06c154c8a, type: 2}
+  armor_Chest: {fileID: 11400000, guid: 1606d1c4d3ed3004fb4ddd168ae08ac4, type: 2}
+  armor_Leggings: {fileID: 11400000, guid: 12a4389df7c9fde42b62d694090c1f7c, type: 2}
+  armor_Boots: {fileID: 11400000, guid: 2c0ee119fb2fbec43bede3225a5ec067, type: 2}
 --- !u!1 &2680450842966743592
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +444,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2680450843729411811}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -310,7 +472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2680450843995259541
 Transform:
   m_ObjectHideFlags: 0
@@ -444,7 +606,7 @@ MonoBehaviour:
   waterPlane: {fileID: 5537467930782276646, guid: aabd98fa485a8694b9706a5434da2e71,
     type: 3}
   sealevel: 25
-  starterIsland: 2
+  starterIsland: 0
   seed: 0
   worldSize: 0
   worldSpread: 0
@@ -570,6 +732,7 @@ Transform:
   - {fileID: 2680450844049852194}
   - {fileID: 1366239439746055265}
   - {fileID: 5739917050066512953}
+  - {fileID: 1433090661}
   m_Father: {fileID: 2680450843729411820}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -667,17 +830,34 @@ MonoBehaviour:
   furnitureMenu: {fileID: 0}
   miscMenu: {fileID: 0}
   adminMenu: {fileID: 0}
-  Building_Recipes: []
+  Building_Recipes:
+  - {fileID: 11400000, guid: 21a7b395401809c45b4ccd4ed079fe15, type: 2}
+  - {fileID: 11400000, guid: 58d1b6bdaf3c98942bc132933c616603, type: 2}
+  - {fileID: 11400000, guid: c8ebd908ba77743488eaa2505a59109f, type: 2}
+  - {fileID: 11400000, guid: 1b7f9fb8474d14d4a969926db1b3ef31, type: 2}
+  - {fileID: 11400000, guid: b0620cdd109d8ca489e0f3566efabc85, type: 2}
+  - {fileID: 11400000, guid: 9052a06aa7ea796448bdc5feff166cd2, type: 2}
+  - {fileID: 11400000, guid: f62ef65bad110074fa67f6228a8d06cd, type: 2}
+  - {fileID: 11400000, guid: a2564ff893d7bb84aa20f3e57e039280, type: 2}
+  - {fileID: 11400000, guid: 48d3019e42610b14caf13fba87bfea50, type: 2}
+  - {fileID: 11400000, guid: abe74051e06209a40885bd0e039d4a92, type: 2}
+  - {fileID: 11400000, guid: 7228ef2e2204b1445a934758e639471b, type: 2}
+  - {fileID: 11400000, guid: 00e85a7e01b21bb4d87347a543891661, type: 2}
+  - {fileID: 11400000, guid: d35553773b7f33f48b38370de7891423, type: 2}
+  - {fileID: 11400000, guid: 84c1f7fd0e2084045a3a919954a3054c, type: 2}
+  - {fileID: 11400000, guid: 1fc03129a4d0a4445abc09145665b0f4, type: 2}
+  - {fileID: 11400000, guid: 653138d425615bc468b22b0f676d5da6, type: 2}
+  - {fileID: 11400000, guid: 123a4ca72e5fd274ebd3910d4664eda0, type: 2}
   Crafting_Recipes: []
   Furniture_Recipes: []
   Misc_Recipes: []
   Admin_Recipes: []
   SelectedRecipe: {fileID: 0}
-  placeable: {fileID: 0}
+  placeable: {fileID: 2100000, guid: ae49c4c569679c6449eee86d6c78de87, type: 2}
   placeDistance: 10
   whatIsDestructable:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   whatIsPlaceableTerrain:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192

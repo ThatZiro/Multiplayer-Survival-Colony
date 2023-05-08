@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21cb495ffbca0404d878640680165899, type: 3}
+  m_Name: SandRocks(0)
+  m_EditorClassIdentifier: 
+  prefabList: []
+  prefabData:
+  - prefab: {fileID: 7516115023043682893, guid: 48c7172734370f54fb10cbc7b1b7bb3c,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 6705620111775728250, guid: 92cf5cab4a233534aba66a4611bbcc02,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 8333233708827168528, guid: f2d418feb2188b94a92358429defa5f8,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 5304695229761514167, guid: f4f60c5c13a9e534b869cc8be39d8197,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 7930272006678129303, guid: 176c952a28cf2724fbfd6767ace7b8e0,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 1290183335556295321, guid: 37797ded0c59bc2419592c3ceb266d3e,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 6109327800364496262, guid: 379692503d2612f469f1e0caa60a2a60,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 1843496018958834417, guid: 00e6d3f0bf0710a49b16fd82304fcf87,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 147719727489133906, guid: b2042a27805127d4d9c8a11dd3f57c51, type: 3}
+    selected: 0
+  - prefab: {fileID: 7378268732925587398, guid: bcc0820f1021422418b35f258c540abd,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 6869709610704981159, guid: 24d15bcf0289d574984b9348e6c3f0d4,
+      type: 3}
+    selected: 1
+  - prefab: {fileID: 7576601035883258667, guid: ab9458240812f0e4ea0a072121beb2fc,
+      type: 3}
+    selected: 1
+  - prefab: {fileID: 4146285770829026383, guid: 426718fd76cfcc04b9b5d0c86c36c884,
+      type: 3}
+    selected: 1
+  - prefab: {fileID: 6972652832239558957, guid: 5e1c259279b904a4aa995f7a7851da87,
+      type: 3}
+    selected: 1
+  - prefab: {fileID: 7116876718738905662, guid: db252e345737a434a8b65cdc00c2eb59,
+      type: 3}
+    selected: 1
+  - prefab: {fileID: 5233722033946916052, guid: 7a523e9c2f61ea240b444d5a89c7c50e,
+      type: 3}
+    selected: 1
+  - prefab: {fileID: 2838651060249112410, guid: 9947b469f5072894a9fec77fc98e89a3,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 9183438348217684002, guid: 56b8bd7a84cac624cb606637dddc19a7,
+      type: 3}
+    selected: 0
+  - prefab: {fileID: 2897999100058870820, guid: 5bfa0b1525b9ad24db4de30987994dbd,
+      type: 3}
+    selected: 0
+  paintType: 0
+  brushSize: 20
+  minBrushSize: 0.1
+  maxBrushSize: 20
+  paintDeltaDistance: 1
+  maxPaintDeltaDistance: 3
+  minPaintDeltaDistance: 0.1
+  prefabsPerStroke: 1
+  maxprefabsPerStroke: 1
+  minprefabsPerStroke: 1
+  spawnHeight: 10
+  addRigidbodyToPaintedPrefab: 1
+  physicsIterations: 100
+  checkLayer: 1
+  checkTag: 0
+  checkSlope: 0
+  ignorePaintedPrefabs: 0
+  ignoreTriggers: 1
+  chainPivotAxis: 0
+  chainDirection: 0
+  requiredTagMask: 0
+  requiredLayerMask: 32
+  minRequiredSlope: 0
+  maxRequiredSlope: 0
+  prefabOriginOffset: {x: 0, y: 0, z: 0}
+  prefabRotationOffset: {x: 0, y: 0, z: 0}
+  draggingAction: 0
+  rotationAxis: 0
+  rotationSensitivity: 10
+  parentingStyle: 2
+  parent: {fileID: 0}
+  rotateToMatchSurface: 0
+  rotateSurfaceDirection: 0
+  randomizeRotation: 1
+  minXRotation: 0
+  maxXRotation: 0
+  minYRotation: 0
+  maxYRotation: 360
+  minZRotation: 0
+  maxZRotation: 0
+  scaleType: 0
+  scaleApplicationType: 0
+  minScale: 1
+  maxScale: 1
+  minXScale: 1
+  maxXScale: 1
+  minYScale: 1
+  maxYScale: 1
+  minZScale: 1
+  maxZScale: 1
+  parentList: []
+  eraseBrushSize: 1
+  minEraseBrushSize: 0.1
+  maxEraseBrushSize: 20
+  eraseType: 0
+  checkLayerForErase: 0
+  checkTagForErase: 0
+  checkSlopeForErase: 0
+  mustBeSelectedInBrush: 0
+  requiredTagMaskForErase: 0
+  requiredLayerMaskForErase: 0
+  minRequiredSlopeForErase: 0
+  maxRequiredSlopeForErase: 0
+  eraseDetection: 0
+  paintBrushHotKey: 9
+  paintBrushHoldKey: 1
+  removeBrushHotKey: 306
+  removeBrushHoldKey: 1
+  disableBrushHotKey: 105
+  disableBrushHoldKey: 1
+  hideToolsWarnings: 0
