@@ -121,7 +121,7 @@ Material:
     - _TurbulenceTiling1: 0
     - _WaveDistortionIntensity: 4
     - _WaveDistortionIntensity1: 0.6
-    - _WaveNormalIntensity: 0.249
+    - _WaveNormalIntensity: 0.22
     - _WaveTile: 33
     - _WaveTile1: 0
     - _WaveTile2: 20

@@ -56,7 +56,15 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _ColorDepthFade: -0.21
+<<<<<<< Updated upstream
     - _DisplaceStrength: 0.174
+=======
+    - _DisplaceStrength: -0.02
+    - _EdgeFoamCutoff: 1
+    - _EdgeFoamDepthFade: 0.19
+    - _EdgeFoamIntensity: 1
+    - _EdgeFoamScale: 1
+>>>>>>> Stashed changes
     - _EnvironmentReflections: 1
     - _FoamCutoff: 0.74
     - _FoamDepthFade: -0.29
@@ -67,21 +75,27 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ReflectionsIntensity: 0.242
-    - _RefractionDepth: 3.37
+    - _RefractionDepth: 36.74
     - _RefractionStrength: 2
     - _Smoothness: 1
     - _SpecularHighlights: 1
     - _TransAmbient: 0.1
     - _TransDirect: 0.9
-    - _TransNormal: 0.5
+    - _TransNormal: 0.565
     - _TransScattering: 2
     - _TransShadow: 0.5
     - _TransStrength: 1
-    - _TurbulenceDistortionIntensity: 4.46
+    - _TurbulenceDistortionIntensity: 6
     - _TurbulenceScale: 1.77
     - _TurbulenceTiling: 10
+<<<<<<< Updated upstream
     - _WaveNormalIntensity: 0.233
     - _WaveTiling01: 3
+=======
+    - _WaterFoamColorIntensity: 1
+    - _WaveNormalIntensity: 0.08
+    - _WaveTiling01: 9
+>>>>>>> Stashed changes
     - _WorldtoObjectPosition: 0
     - __dirty: 0
     m_Colors:
