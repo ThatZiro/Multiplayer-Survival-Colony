@@ -24,6 +24,22 @@ Material:
         m_Texture: {fileID: 2800000, guid: b166ccd7e871a3948ac1028410a7fe76, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _FlowMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HeightMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ReflectionNormal:
         m_Texture: {fileID: 2800000, guid: 70546bb8eb214354e83b7f57e5a4821c, type: 3}
         m_Scale: {x: 3, y: 3}
@@ -56,51 +72,66 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _ColorDepthFade: -0.21
-<<<<<<< Updated upstream
     - _DisplaceStrength: 0.174
-=======
-    - _DisplaceStrength: -0.02
     - _EdgeFoamCutoff: 1
     - _EdgeFoamDepthFade: 0.19
     - _EdgeFoamIntensity: 1
     - _EdgeFoamScale: 1
->>>>>>> Stashed changes
     - _EnvironmentReflections: 1
+    - _FlowIntensity: 1
+    - _FlowPower: 1
+    - _FlowRandomizeUV: 0.26
     - _FoamCutoff: 0.74
     - _FoamDepthFade: -0.29
+    - _FoamIntensity: 1
+    - _FoamPower: 1
+    - _FoamRandomizeUV: 0.26
     - _FoamScale: 1.88
     - _FoamSpeed: 1
+    - _HeightIntensity: 1
+    - _HeightPower: 1
+    - _HeightRandomizeUV: 0.26
+    - _Metallic: 0.2
+    - _NormalIntensity: 0.5
+    - _NormalRandomizeUV: 0.26
     - _Opacity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ReflectionsIntensity: 0.242
-    - _RefractionDepth: 36.74
+    - _RefractionDepth: 3.37
     - _RefractionStrength: 2
+    - _Roughness: 0.05
     - _Smoothness: 1
     - _SpecularHighlights: 1
     - _TransAmbient: 0.1
     - _TransDirect: 0.9
-    - _TransNormal: 0.565
+    - _TransNormal: 0.5
     - _TransScattering: 2
     - _TransShadow: 0.5
     - _TransStrength: 1
-    - _TurbulenceDistortionIntensity: 6
+    - _TurbulenceDistortionIntensity: 4.46
     - _TurbulenceScale: 1.77
     - _TurbulenceTiling: 10
-<<<<<<< Updated upstream
+    - _WaterFoamColorIntensity: 1
     - _WaveNormalIntensity: 0.233
     - _WaveTiling01: 3
-=======
-    - _WaterFoamColorIntensity: 1
-    - _WaveNormalIntensity: 0.08
-    - _WaveTiling01: 9
->>>>>>> Stashed changes
     - _WorldtoObjectPosition: 0
     - __dirty: 0
+    - _useStepforFlow: 0
     m_Colors:
     - _ColorDeep: {r: 0, g: 0.43571073, b: 0.5377358, a: 0}
     - _ColorShallow: {r: 0.9669811, g: 0.99255455, b: 1, a: 0}
+    - _EdgeFoamSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FlowSpeed: {r: 0, g: -0.2, b: 0, a: 0}
+    - _FlowUVTiling: {r: 1, g: 1, b: 0, a: 0}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FoamSpeed: {r: 1, g: 1, b: 0, a: 0}
+    - _FoamUVTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _HeightSpeed: {r: 1, g: 1, b: 0, a: 0}
+    - _HeightUVTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _NormalSpeed: {r: 0, g: -0.2, b: 0, a: 0}
+    - _NormalUVTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _WaterFoamColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
