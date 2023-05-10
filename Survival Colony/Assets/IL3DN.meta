@@ -1,6 +1,19 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Survival Colony/Assets/IL3DN.meta
 guid: d2556b1a4c168ea4688aafcba212fed5
+=======
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Survival Colony/Assets/Blink/Art.meta
+guid: 112ba712ff84fe54baee7ad2f700c3ce
+>>>>>>> parent of 0d53d6b1 (Revert "Began work on character creator menu"):Survival Colony/Assets/Blink/Art.meta
 folderAsset: yes
+========
+guid: 511349ec5272ece458b0ade6c4725996
+>>>>>>>> Stashed changes:Survival Colony/Assets/Blink/Art/Characters/Stylized/Demo_Characters/DEMO_FreeStylizedHumanMale.unity.meta
+=======
+guid: 129d5b9f03c802a4193de37d8fd7019e
+folderAsset: yes
+>>>>>>> Stashed changes
 DefaultImporter:
   externalObjects: {}
   userData: 
