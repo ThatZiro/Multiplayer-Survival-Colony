@@ -16,4 +16,4 @@ public class InventoryManager : MonoBehaviour
     public Item armor_Leggings;
     public Item armor_Boots;
 
-}
+ }
