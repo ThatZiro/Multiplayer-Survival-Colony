@@ -195,12 +195,12 @@ namespace NHance.Assets.Scripts
 
             movement *= Time.deltaTime;
 
-            _settings.CollisionFlags = _settings.Controller.Move(movement);
+           // _settings.CollisionFlags = _settings.Controller.Move(movement);
         }
 
         private void ApplyIdle()
         {
-            if (_settings.Controller.velocity.sqrMagnitude < 0.1f && Mathf.Abs(_settings.VerticalSpeed) < 0.01f &&
+            if (_settings.Controller.Motor.Velocity.sqrMagnitude < 0.1f && Mathf.Abs(_settings.VerticalSpeed) < 0.01f &&
                 _settings.CharacterState != CharacterStateEnum.IdleInProgress)
                 _settings.CharacterState = CharacterStateEnum.IdleStarted;
 

@@ -68,7 +68,7 @@ namespace NHance.Assets.Scripts
             {
                 var normalize = _settings.MoveSpeed / _settings.SprintSpeed;
                 _settings.Animator.SetFloat(_settings.MovementValueName, normalize);
-                _settings.Animator.speed = Mathf.Clamp(_settings.Controller.velocity.magnitude,
+                _settings.Animator.speed = Mathf.Clamp(_settings.Controller.Motor.Velocity.magnitude,
                     0.0f,
                     _settings.MoveSpeed <= _settings.WalkSpeed
                         ? Mathf.Clamp(_settings.MoveSpeed / _settings.WalkSpeed, 0.5f, 1)

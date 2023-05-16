@@ -5,6 +5,7 @@ using KinematicCharacterController;
 public class CharacterController : MonoBehaviour, ICharacterController
 {
     public KinematicCharacterMotor Motor;
+    
 
     #region Interface
     public void AfterCharacterUpdate(float deltaTime)
